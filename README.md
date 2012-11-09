@@ -1,5 +1,5 @@
 
-##Ping Pong Game in Dart eith DOM
+##Ping Pong Game in Dart with DOM
 
 **Categories**: education, game, DOM, circle, rectangle, HTML5.
 
