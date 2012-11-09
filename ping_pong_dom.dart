@@ -8,7 +8,7 @@ CSSStyleSheet styleSheet;
 
 var pingPong = {
   'ball': {
-    'speed': 1,
+    'speed': 3,
     'x'    : 195,
     'y'    : 100,
     'dx'   : 1,
