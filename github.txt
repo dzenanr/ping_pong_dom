@@ -29,14 +29,14 @@ Create a New Repo at GitHub
 (without README, since cloning will not be used).
 Repository Name: ping_pong_dom
 Description: 
-  Game.Memory done by the Dart Game Group to learn Dart.
+  Educational game in Dart by using DOM.
       
 Next steps:
   cd git/dart/game/ping_pong_dom
   git init
   git status
   git add .
-  git commit -m 'initial model version'
+  git commit -m 'initial version'
   git remote add origin https://github.com/dzenanr/ping_pong_dom.git
   git push -u origin master     
 
