@@ -1,0 +1,49 @@
+/* geometry.css */
+
+/* ===[ begin ]=== */
+
+/*
+  Title:         Ball Design Style
+  Author:        Dzenan Ridjanovic
+  Influenced By: http://www.packtpub.com/html5-games-development-using-css-javascript-beginners-guide/book
+  Created:       2012-11-06
+  Updated:       2012-11-06
+*/
+
+#circle {
+  background: #27527b;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 195px;
+  top: 100px;
+  border-radius: 10px;
+}
+
+#rectangle {
+  background: #eef3f7;
+  position: relative;
+  overflow: hidden;
+  width: 400px;
+  height: 200px;
+}
+
+#rectangleA {
+  background: #9cc3e8;
+  position: absolute;
+  width: 20px;
+  height: 80px;
+  left: 20px;
+  top: 60px;
+}
+  
+#rectangleB {
+  background: #9cc3e8;
+  position: absolute;
+  width: 20px;
+  height: 80px;
+  left: 360px;
+  top: 80px;
+}
+ 
+/* ===[ end ]=== */ 

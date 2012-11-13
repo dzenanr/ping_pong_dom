@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>DOM Examples in Dart</title>
+    <link rel="stylesheet" title="geometry" href="css/geometry.css" />
+    <link rel="stylesheet" href="css/link.css" />
+    <link rel="stylesheet" href="css/list.css" />
+    <link rel="stylesheet" href="css/marker.css" />
+    <link rel="stylesheet" href="css/page.css" />
+    <link rel="stylesheet" href="css/table.css" />
+  </head>
+  <body>
+    <h1 class="page-title">DOM Ping Pong</h1>
+
+    <section id="description"></section>
+    <section id="links"></section>
+
+    <section id="score">
+      <div>
+        <span class="marker-brown">Player A</span> :
+        <span id="scoreA" class="marker">0</span>
+      </div>
+      <div>
+        <span class="marker-gray">Player B</span> :
+        <span id="scoreB" class="marker">0</span>
+      </div>
+    </section>
+    <section id="rectangle">
+      <div id="rectangleA"></div>
+      <div id="rectangleB"></div>
+      <div id="circle"></div>
+    </section>
+
+    <script type="application/dart" src="example.dart"></script>
+    <script
+      src=
+    "https://dart.googlecode.com/svn/branches/bleeding_edge/dart/client/dart.js">
+    </script>
+  </body>
+</html>

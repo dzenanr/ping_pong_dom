@@ -1,0 +1,60 @@
+/* marker.css */
+
+/* ===[ begin ]=== */
+
+/*
+  Title:   Marker Design Style
+  Author:  Dzenan Ridjanovic
+  Created: 2006-09-03
+  Updated: 2012-11-07
+*/
+
+	.marker {
+		font-family: arial, sans-serif;
+		font-size: 14px;
+		font-weight: bold;
+		color: #003366;
+		background: #ffe4b5;
+		padding-left: 1px;
+		padding-right: 1px;
+		margin-left: 1px;
+		margin-right: 1px;
+	}
+
+	.marker {
+    font-family: arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #003366;
+    background: #ffe4b5;
+    padding-left: 1px;
+    padding-right: 1px;
+    margin-left: 1px;
+    margin-right: 1px;
+  }
+
+  .marker-brown {
+    font-family: arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: brown;
+    background: #ffe4b5;
+    padding-left: 1px;
+    padding-right: 1px;
+    margin-left: 1px;
+    margin-right: 1px;
+  }
+
+  .marker-gray {
+    font-family: arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #696969;
+    background: #ffe4b5;
+    padding-left: 1px;
+    padding-right: 1px;
+    margin-left: 1px;
+    margin-right: 1px;
+  }
+
+/* ===[ end ]=== */
