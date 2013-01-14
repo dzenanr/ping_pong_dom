@@ -4,7 +4,7 @@ import 'dart:isolate';
 const int interval = 10;
 const int increment = 20; // move increment in pixels
 
-CSSStyleSheet styleSheet;
+CssStyleSheet styleSheet;
 
 var pingPong = {
   'ball': {
@@ -106,8 +106,8 @@ String links() {
 }
 
 main() {
-  document.query('#description').innerHTML = description();
-  document.query('#links').innerHTML = links();
+  document.query('#description').innerHtml = description();
+  document.query('#links').innerHtml = links();
   styleSheet = document.styleSheets[0];
 
   // Redraw every interval ms.

@@ -36,6 +36,6 @@ String links() {
 }
 
 main() {
-  document.query('#description').innerHTML = description();
-  document.query('#links').innerHTML = links();
+  document.query('#description').innerHtml = description();
+  document.query('#links').innerHtml = links();
 }

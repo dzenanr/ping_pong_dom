@@ -4,7 +4,7 @@ import 'dart:isolate';
 const int interval = 10;
 const int increment = 20; // move increment in pixels
 
-CSSStyleSheet styleSheet;
+CssStyleSheet styleSheet;
 
 var pingPong = {
   'ball': {

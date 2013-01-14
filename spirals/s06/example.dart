@@ -5,7 +5,7 @@ const int interval = 10;
 const int increment = 20; // move increment in pixels
 const int speed = 4;
 
-CSSStyleSheet styleSheet;
+CssStyleSheet styleSheet;
 
 var pingPong = {
   'ball': {

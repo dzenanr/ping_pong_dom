@@ -4,7 +4,7 @@ import 'dart:isolate';
 const int interval = 10;
 const int increment = 20; // move increment in pixels
 
-CSSStyleSheet styleSheet;
+CssStyleSheet styleSheet;
 
 var pingPong = {
   'ball': {
@@ -134,7 +134,7 @@ moveBall() {
   if (ball['x'] + ball['speed'] * ball['dx'] > pingPong['table']['width']) {
     // player B lost
     pingPong['paddleA']['score']++;
-    document.query('#scoreA').innerHTML =
+    document.query('#scoreA').innerHtml =
         pingPong['paddleA']['score'].toString();
     // reset the ball;
     ball['x'] = 250;
@@ -145,7 +145,7 @@ moveBall() {
   if (ball['x'] + ball['speed'] * ball['dx'] < 0) {
     // player A lost
     pingPong['paddleB']['score']++;
-    document.query('#scoreB').innerHTML =
+    document.query('#scoreB').innerHtml =
         pingPong['paddleB']['score'].toString();
     // reset the ball;
     ball['x'] = 150;
@@ -206,8 +206,8 @@ onKeyDown(e) {
 }
 
 main() {
-  document.query('#description').innerHTML = description();
-  document.query('#links').innerHTML = links();
+  document.query('#description').innerHtml = description();
+  document.query('#links').innerHtml = links();
   styleSheet = document.styleSheets[0]; // geometry.css
 
   document.on.keyDown.add(onKeyDown);

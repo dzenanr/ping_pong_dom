@@ -8,11 +8,11 @@ const String playerAColor = 'brown';
 const String playerBColor = 'gray';
 
 // http://api.dartlang.org/docs/bleeding_edge/dart_html/CSSStyleSheet.html
-CSSStyleSheet geometryStyleSheet;
+CssStyleSheet geometryStyleSheet;
 // http://api.dartlang.org/docs/bleeding_edge/dart_html/CSSStyleRule.html
-CSSStyleRule circleStyleRule;
+CssStyleRule circleStyleRule;
 // http://api.dartlang.org/docs/bleeding_edge/dart_html/CSSStyleDeclaration.html
-CSSStyleDeclaration circleStyleDeclaration;
+CssStyleDeclaration circleStyleDeclaration;
 
 var pingPong = {
   'ball': {
@@ -166,7 +166,7 @@ moveBall() {
     // player B lost
     paddleA['score']++;
     changeBallColor(playerAColor);
-    document.query('#scoreA').innerHTML = paddleA['score'].toString();
+    document.query('#scoreA').innerHtml = paddleA['score'].toString();
     // reset the ball;
     ball['x'] = 250;
     ball['y'] = 100;
@@ -177,7 +177,7 @@ moveBall() {
     // player A lost
     paddleB['score']++;
     changeBallColor(playerBColor);
-    document.query('#scoreB').innerHTML = paddleB['score'].toString();
+    document.query('#scoreB').innerHtml = paddleB['score'].toString();
     // reset the ball;
     ball['x'] = 150;
     ball['y'] = 100;
@@ -240,15 +240,15 @@ examineCss() {
 
   // http://api.dartlang.org/docs/bleeding_edge/dart_html/StyleSheet.html
   // http://api.dartlang.org/docs/bleeding_edge/dart_html/CSSStyleSheet.html
-  CSSStyleSheet styleSheet = document.styleSheets[0]; // geometry.css
+  CssStyleSheet styleSheet = document.styleSheets[0]; // geometry.css
   print('styleSheet.title: ${styleSheet.title}');
 
-  List<CSSRule> cssRules = styleSheet.cssRules;
+  List<CssRule> cssRules = styleSheet.cssRules;
   print('cssRules.length: ${cssRules.length}');
 
   // http://api.dartlang.org/docs/bleeding_edge/dart_html/CSSRule.html
   // http://api.dartlang.org/docs/bleeding_edge/dart_html/CSSStyleRule.html
-  CSSStyleRule circleCssRule = cssRules[0];
+  CssStyleRule circleCssRule = cssRules[0];
   print('circleCssRule.cssText: ${circleCssRule.cssText}');
   print('circleCssRule.selectorText: ${circleCssRule.selectorText}');
   print('circleCssRule.type: ${circleCssRule.type}'); // 1 is normal style
@@ -260,7 +260,7 @@ examineCss() {
   print("circle style");
   print("------------");
   // http://api.dartlang.org/docs/bleeding_edge/dart_html/CSSStyleDeclaration.html
-  CSSStyleDeclaration circleStyle = circleCssRule.style;
+  CssStyleDeclaration circleStyle = circleCssRule.style;
   circleStyle.setProperty('background','yellow','');
   circleStyle.setProperty('font-weight','bold','important');
   var j, s = '';
@@ -276,12 +276,12 @@ examineCss() {
 
   print("geometry rules");
   print("--------------");
-  for (CSSRule cssRule in cssRules) {
+  for (CssRule cssRule in cssRules) {
     print(cssRule.cssText);
   }
 
   // all style sheets
-  CSSStyleSheet geometryCss;
+  CssStyleSheet geometryCss;
   print('document.styleSheets.length: ${document.styleSheets.length}');
   for (var ssi = 0; ssi <document.styleSheets.length; ssi++) {
     print('document.styleSheets[${ssi}].title: ${document.styleSheets[ssi].title}' );
@@ -292,7 +292,7 @@ examineCss() {
   }
 }
 
-CSSStyleSheet findStyleSheet(String title) {
+CssStyleSheet findStyleSheet(String title) {
   for (var ssi = 0; ssi <document.styleSheets.length; ssi++) {
     if (document.styleSheets[ssi].title == title) {
       return document.styleSheets[ssi];
@@ -300,10 +300,10 @@ CSSStyleSheet findStyleSheet(String title) {
   }
 }
 
-CSSStyleRule findCssRule(CSSStyleSheet styleSheet, String selector) {
-  List<CSSRule> styleRules = styleSheet.cssRules;
+CssStyleRule findCssRule(CssStyleSheet styleSheet, String selector) {
+  List<CssRule> styleRules = styleSheet.cssRules;
   for (var sr = 0; sr <styleRules.length; sr++) {
-    CSSStyleRule styleRule = styleRules[sr];
+    CssStyleRule styleRule = styleRules[sr];
     if (styleRule.selectorText == selector) {
       return styleRule;
     }
@@ -320,8 +320,8 @@ changeBallPosition(int x, int y) {
 }
 
 main() {
-  document.query('#description').innerHTML = description();
-  document.query('#links').innerHTML = links();
+  document.query('#description').innerHtml = description();
+  document.query('#links').innerHtml = links();
   geometryStyleSheet = findStyleSheet('geometry');
   circleStyleRule = findCssRule(geometryStyleSheet, '#circle');
   circleStyleDeclaration = circleStyleRule.style;
