@@ -1,5 +1,5 @@
 import 'dart:html';
-import 'dart:isolate';
+import 'dart:async';
 
 const int interval = 10;
 const int increment = 20; // move increment in pixels
