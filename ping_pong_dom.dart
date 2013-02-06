@@ -183,7 +183,7 @@ moveBall() {
 
 main() {
   styleSheet = document.styleSheets[0];
-  document.on.keyDown.add(onKeyDown);
+  document.onKeyDown.listen(onKeyDown);
 
   // Redraw every interval ms.
   new Timer.repeating(interval, (t) => moveBall());

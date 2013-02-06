@@ -326,7 +326,7 @@ main() {
   circleStyleRule = findCssRule(geometryStyleSheet, '#circle');
   circleStyleDeclaration = circleStyleRule.style;
 
-  document.on.keyDown.add(onKeyDown);
+  document.onKeyDown.listen(onKeyDown);
   // Redraw every interval ms.
   new Timer.repeating(interval, (t) => moveBall());
 
