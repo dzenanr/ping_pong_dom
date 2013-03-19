@@ -186,7 +186,7 @@ main() {
   document.onKeyDown.listen(onKeyDown);
 
   // Redraw every interval ms.
-  new Timer.repeating(const Duration(milliseconds: interval), (t) => moveBall());
+  new Timer.periodic(const Duration(milliseconds: interval), (t) => moveBall());
 }
 
 
