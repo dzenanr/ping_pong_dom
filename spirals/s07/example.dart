@@ -1,11 +1,11 @@
 import 'dart:html';
 import 'dart:async';
 
-const int interval = 10;
-const int increment = 20; // move increment in pixels
-const int speed = 4;
-const String playerAColor = 'brown';
-const String playerBColor = 'gray';
+const int INTERVAL = 10;
+const int INCREMENT = 20; // move increment in pixels
+const int SPEED = 4;
+const String PLAYER_A_COLOR = 'brown';
+const String PLAYER_B_COLOR = 'gray';
 
 // http://api.dartlang.org/docs/bleeding_edge/dart_html/CSSStyleSheet.html
 CssStyleSheet geometryStyleSheet;
@@ -16,7 +16,7 @@ CssStyleDeclaration circleStyleDeclaration;
 
 var pingPong = {
   'ball': {
-    'speed': speed,
+    'speed': SPEED,
     'x'    : 195,
     'y'    : 100,
     'dx'   : 1,
@@ -165,7 +165,7 @@ moveBall() {
   if (ball['x'] + ball['speed'] * ball['dx'] > table['width']) {
     // player B lost
     paddleA['score']++;
-    changeBallColor(playerAColor);
+    changeBallColor(PLAYER_A_COLOR);
     document.query('#scoreA').innerHtml = paddleA['score'].toString();
     // reset the ball;
     ball['x'] = 250;
@@ -176,7 +176,7 @@ moveBall() {
   if (ball['x'] + ball['speed'] * ball['dx'] < 0) {
     // player A lost
     paddleB['score']++;
-    changeBallColor(playerBColor);
+    changeBallColor(PLAYER_B_COLOR);
     document.query('#scoreB').innerHtml = paddleB['score'].toString();
     // reset the ball;
     ball['x'] = 150;
@@ -215,19 +215,19 @@ onKeyDown(e) {
   var paddleB = pingPong['paddleB'];
   var key = pingPong['key'];
   if (e.keyCode == key['w']) {
-    paddleA['top'] = paddleA['top'] - increment;
+    paddleA['top'] = paddleA['top'] - INCREMENT;
     // update the left rectangle (A) rule
     updateRectangleARule(paddleA['top']);
   } else if (e.keyCode == key['s']) {
-    paddleA['top'] = paddleA['top'] + increment;
+    paddleA['top'] = paddleA['top'] + INCREMENT;
     // update the left rectangle (A) rule
     updateRectangleARule(paddleA['top']);
   } else if (e.keyCode == key['up']) {
-    paddleB['top'] = paddleB['top'] - increment;
+    paddleB['top'] = paddleB['top'] - INCREMENT;
     // update the right rectangle (B) rule
     updateRectangleBRule(paddleB['top']);
   } else if (e.keyCode == key['down']) {
-    paddleB['top'] = paddleB['top'] + increment;
+    paddleB['top'] = paddleB['top'] + INCREMENT;
     // update the right rectangle (B) rule
     updateRectangleBRule(paddleB['top']);
   }
@@ -327,8 +327,8 @@ main() {
   circleStyleDeclaration = circleStyleRule.style;
 
   document.onKeyDown.listen(onKeyDown);
-  // Redraw every interval ms.
-  new Timer.periodic(const Duration(milliseconds: interval), (t) => moveBall());
+  // Redraw every INTERVAL ms.
+  new Timer.periodic(const Duration(milliseconds: INTERVAL), (t) => moveBall());
 
   //examineCss();
 }

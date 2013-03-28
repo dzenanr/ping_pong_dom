@@ -1,8 +1,8 @@
 import 'dart:html';
 import 'dart:async';
 
-const int interval = 10;
-const int increment = 20; // move increment in pixels
+const int INTERVAL = 10;
+const int INCREMENT = 20; // move increment in pixels
 
 CssStyleSheet styleSheet;
 
@@ -153,22 +153,22 @@ moveBall() {
 
 onKeyDown(e) {
   if (e.keyCode == pingPong['key']['w']) {
-    pingPong['paddleA']['top'] = pingPong['paddleA']['top'] - increment;
+    pingPong['paddleA']['top'] = pingPong['paddleA']['top'] - INCREMENT;
     // update the rectangleA rule
     styleSheet.removeRule(2);
     styleSheet.insertRule(rectangleARule(pingPong['paddleA']['top']), 2);
   } else if (e.keyCode == pingPong['key']['s']) {
-    pingPong['paddleA']['top'] = pingPong['paddleA']['top'] + increment;
+    pingPong['paddleA']['top'] = pingPong['paddleA']['top'] + INCREMENT;
     // update the rectangleA rule
     styleSheet.removeRule(2);
     styleSheet.insertRule(rectangleARule(pingPong['paddleA']['top']), 2);
   } else if (e.keyCode == pingPong['key']['up']) {
-    pingPong['paddleB']['top'] = pingPong['paddleB']['top'] - increment;
+    pingPong['paddleB']['top'] = pingPong['paddleB']['top'] - INCREMENT;
     // update the rectangleB rule
     styleSheet.removeRule(3);
     styleSheet.insertRule(rectangleBRule(pingPong['paddleB']['top']), 3);
   } else if (e.keyCode == pingPong['key']['down']) {
-    pingPong['paddleB']['top'] = pingPong['paddleB']['top'] + increment;
+    pingPong['paddleB']['top'] = pingPong['paddleB']['top'] + INCREMENT;
     // update the rectangleB rule
     styleSheet.removeRule(3);
     styleSheet.insertRule(rectangleBRule(pingPong['paddleB']['top']), 3);
@@ -181,6 +181,6 @@ main() {
   styleSheet = document.styleSheets[0]; // geometry.css
 
   document.onKeyDown.listen(onKeyDown);
-  // Redraw every interval ms.
-  new Timer.periodic(const Duration(milliseconds: interval), (t) => moveBall());
+  // Redraw every INTERVAL ms.
+  new Timer.periodic(const Duration(milliseconds: INTERVAL), (t) => moveBall());
 }

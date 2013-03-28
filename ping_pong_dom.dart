@@ -185,7 +185,7 @@ main() {
   styleSheet = document.styleSheets[0];
   document.onKeyDown.listen(onKeyDown);
 
-  // Redraw every interval ms.
+  // Redraw every INTERVAL ms.
   new Timer.periodic(const Duration(milliseconds: INTERVAL), (t) => moveBall());
 }
 

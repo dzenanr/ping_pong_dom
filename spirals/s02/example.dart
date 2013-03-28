@@ -1,8 +1,8 @@
 import 'dart:html';
 import 'dart:async';
 
-const int interval = 10;
-const int increment = 20; // move increment in pixels
+const int INTERVAL = 10;
+const int INCREMENT = 20; // move increment in pixels
 
 CssStyleSheet styleSheet;
 
@@ -110,6 +110,6 @@ main() {
   document.query('#links').innerHtml = links();
   styleSheet = document.styleSheets[0];
 
-  // Redraw every interval ms.
-  new Timer.periodic(const Duration(milliseconds: interval), (t) => moveBall());
+  // Redraw every INTERVAL ms.
+  new Timer.periodic(const Duration(milliseconds: INTERVAL), (t) => moveBall());
 }
