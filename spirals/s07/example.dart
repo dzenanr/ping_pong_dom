@@ -330,5 +330,5 @@ main() {
   // Redraw every INTERVAL ms.
   new Timer.periodic(const Duration(milliseconds: INTERVAL), (t) => moveBall());
 
-  //examineCss();
+  examineCss();
 }
