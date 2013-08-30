@@ -23,10 +23,10 @@ var pingPong = {
     'dy'   : 1
   },
   'key': {
-    'w'    : 87,
-    's'    : 83,
-    'up'   : 38,
-    'down' : 40
+    'w'    : KeyCode.W,
+    's'    : KeyCode.S,
+    'up'   : KeyCode.UP,
+    'down' : KeyCode.DOWN
   },
   'paddleA' : {
     'width'  : 20,
