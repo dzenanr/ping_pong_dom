@@ -207,7 +207,12 @@ onKeyDown(e) {
 
 main() {
   document.query('#description').innerHtml = description();
-  document.query('#links').innerHtml = links();
+  document.query('#links').setInnerHtml(
+    links(),
+    validator: new NodeValidatorBuilder()
+      ..allowHtml5()
+      ..allowElement('a', attributes: ['href'])
+  );
   styleSheet = document.styleSheets[0]; // geometry.css
 
   document.onKeyDown.listen(onKeyDown);

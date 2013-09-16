@@ -37,5 +37,11 @@ String links() {
 
 main() {
   document.query('#description').innerHtml = description();
-  document.query('#links').innerHtml = links();
+  //document.query('#links').innerHtml = links();
+  document.query('#links').setInnerHtml(
+    links(),
+    validator: new NodeValidatorBuilder()
+      ..allowHtml5()
+      ..allowElement('a', attributes: ['href'])
+  );
 }

@@ -321,7 +321,12 @@ changeBallPosition(int x, int y) {
 
 main() {
   document.query('#description').innerHtml = description();
-  document.query('#links').innerHtml = links();
+  document.query('#links').setInnerHtml(
+    links(),
+    validator: new NodeValidatorBuilder()
+      ..allowHtml5()
+      ..allowElement('a', attributes: ['href'])
+  );
   geometryStyleSheet = findStyleSheet('geometry');
   circleStyleRule = findCssRule(geometryStyleSheet, '#circle');
   circleStyleDeclaration = circleStyleRule.style;
