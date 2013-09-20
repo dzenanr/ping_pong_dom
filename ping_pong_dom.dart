@@ -1,7 +1,6 @@
 import 'dart:html';
 import 'dart:async';
 
-const int INTERVAL = 10;
 const int INCREMENT = 20; // move increment in pixels
 
 CssStyleSheet styleSheet;
@@ -181,12 +180,16 @@ moveBall() {
   updateBallRule(ball['x'], ball['y']);
 }
 
+gameLoop(num delta) {
+  moveBall();
+  window.animationFrame.then(gameLoop);
+}
+
 main() {
   styleSheet = document.styleSheets[0];
   document.onKeyDown.listen(onKeyDown);
-
-  // Redraw every INTERVAL ms.
-  new Timer.periodic(const Duration(milliseconds: INTERVAL), (t) => moveBall());
+  // redraw
+  window.animationFrame.then(gameLoop);
 }
 
 
