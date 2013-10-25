@@ -196,8 +196,8 @@ onKeyDown(e) {
 }
 
 main() {
-  document.query('#description').innerHtml = description();
-  document.query('#links').setInnerHtml(
+  document.querySelector('#description').innerHtml = description();
+  document.querySelector('#links').setInnerHtml(
     links(),
     validator: new NodeValidatorBuilder()
       ..allowHtml5()

@@ -134,7 +134,7 @@ moveBall() {
   if (ball['x'] + ball['speed'] * ball['dx'] > pingPong['table']['width']) {
     // player B lost
     pingPong['paddleA']['score']++;
-    document.query('#scoreA').innerHtml =
+    document.querySelector('#scoreA').innerHtml =
         pingPong['paddleA']['score'].toString();
     // reset the ball;
     ball['x'] = 250;
@@ -145,7 +145,7 @@ moveBall() {
   if (ball['x'] + ball['speed'] * ball['dx'] < 0) {
     // player A lost
     pingPong['paddleB']['score']++;
-    document.query('#scoreB').innerHtml =
+    document.querySelector('#scoreB').innerHtml =
         pingPong['paddleB']['score'].toString();
     // reset the ball;
     ball['x'] = 150;
@@ -206,8 +206,8 @@ onKeyDown(e) {
 }
 
 main() {
-  document.query('#description').innerHtml = description();
-  document.query('#links').setInnerHtml(
+  document.querySelector('#description').innerHtml = description();
+  document.querySelector('#links').setInnerHtml(
     links(),
     validator: new NodeValidatorBuilder()
       ..allowHtml5()
