@@ -166,7 +166,7 @@ moveBall() {
     // player B lost
     paddleA['score']++;
     changeBallColor(PLAYER_A_COLOR);
-    document.querySelector('#scoreA').innerHtml = paddleA['score'].toString();
+    querySelector('#scoreA').innerHtml = paddleA['score'].toString();
     // reset the ball;
     ball['x'] = 250;
     ball['y'] = 100;
@@ -177,7 +177,7 @@ moveBall() {
     // player A lost
     paddleB['score']++;
     changeBallColor(PLAYER_B_COLOR);
-    document.querySelector('#scoreB').innerHtml = paddleB['score'].toString();
+    querySelector('#scoreB').innerHtml = paddleB['score'].toString();
     // reset the ball;
     ball['x'] = 150;
     ball['y'] = 100;
@@ -320,8 +320,8 @@ changeBallPosition(int x, int y) {
 }
 
 main() {
-  document.querySelector('#description').innerHtml = description();
-  document.querySelector('#links').setInnerHtml(
+  querySelector('#description').innerHtml = description();
+  querySelector('#links').setInnerHtml(
     links(),
     validator: new NodeValidatorBuilder()
       ..allowHtml5()
