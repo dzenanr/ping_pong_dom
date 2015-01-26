@@ -1,7 +1,6 @@
 import 'dart:html';
-import 'dart:async';
 
-const int INCREMENT = 20; // move increment in pixels
+const int increment = 20; // move increment in pixels
 
 CssStyleSheet styleSheet;
 
@@ -102,19 +101,19 @@ onKeyDown(e) {
   var paddleB = pingPong['paddleB'];
   var key = pingPong['key'];
   if (e.keyCode == key['w']) {
-    paddleA['top'] = paddleA['top'] - INCREMENT;
+    paddleA['top'] = paddleA['top'] - increment;
     // update the paddle A rule
     updatePaddleARule(paddleA['top']);
   } else if (e.keyCode == key['s']) {
-    paddleA['top'] = paddleA['top'] + INCREMENT;
+    paddleA['top'] = paddleA['top'] + increment;
     // update the paddle A rule
     updatePaddleARule(paddleA['top']);
   } else if (e.keyCode == key['up']) {
-    paddleB['top'] = paddleB['top'] - INCREMENT;
+    paddleB['top'] = paddleB['top'] - increment;
     // update the paddle B rule
     updatePaddleBRule(paddleB['top']);
   } else if (e.keyCode == key['down']) {
-    paddleB['top'] = paddleB['top'] + INCREMENT;
+    paddleB['top'] = paddleB['top'] + increment;
     // update the paddle B rule
     updatePaddleBRule(paddleB['top']);
   }
