@@ -2,6 +2,10 @@
 
 based on [Semantic Versioning](http://semver.org/)
 
+*0.0.4* 2015-05-04
+
++ remove unused variables
+
 *0.0.3* 2015-02-06
 
 + add web directory to all spirals

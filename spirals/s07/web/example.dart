@@ -281,12 +281,11 @@ examineCss() {
   }
 
   // all style sheets
-  CssStyleSheet geometryCss;
   print('document.styleSheets.length: ${document.styleSheets.length}');
   for (var ssi = 0; ssi <document.styleSheets.length; ssi++) {
     print('document.styleSheets[${ssi}].title: ${document.styleSheets[ssi].title}' );
     if (document.styleSheets[ssi].title == "geometry") {
-      geometryCss = document.styleSheets[ssi];
+      //CssStyleSheet geometryCss = document.styleSheets[ssi];
       //break;
     }
   }
@@ -298,6 +297,7 @@ CssStyleSheet findStyleSheet(String title) {
       return document.styleSheets[ssi];
     }
   }
+  return null;
 }
 
 CssStyleRule findCssRule(CssStyleSheet styleSheet, String selector) {
@@ -308,6 +308,7 @@ CssStyleRule findCssRule(CssStyleSheet styleSheet, String selector) {
       return styleRule;
     }
   }
+  return null;
 }
 
 changeBallColor(String color) {
